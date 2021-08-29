@@ -15,9 +15,9 @@ namespace CadastroFornecedores.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
-                    Nome = table.Column<string>(type: "longtext", nullable: true)
+                    Nome = table.Column<string>(type: "varchar(50)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Documento = table.Column<string>(type: "longtext", nullable: true)
+                    Documento = table.Column<string>(type: "varchar(14)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     TipoFornecedor = table.Column<int>(type: "int", nullable: false),
                     Ativo = table.Column<bool>(type: "tinyint(1)", nullable: false)
@@ -34,19 +34,19 @@ namespace CadastroFornecedores.Migrations
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
                     FornecedorId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
-                    Logradouro = table.Column<string>(type: "longtext", nullable: true)
+                    Logradouro = table.Column<string>(type: "varchar(50)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Numero = table.Column<string>(type: "longtext", nullable: true)
+                    Numero = table.Column<string>(type: "varchar(6)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Complemento = table.Column<string>(type: "longtext", nullable: true)
+                    Complemento = table.Column<string>(type: "varchar(50)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Cep = table.Column<string>(type: "longtext", nullable: true)
+                    Cep = table.Column<string>(type: "varchar(8)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Bairro = table.Column<string>(type: "longtext", nullable: true)
+                    Bairro = table.Column<string>(type: "varchar(50)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Cidade = table.Column<string>(type: "longtext", nullable: true)
+                    Cidade = table.Column<string>(type: "varchar(50)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Estado = table.Column<string>(type: "longtext", nullable: true)
+                    Estado = table.Column<string>(type: "varchar(50)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -57,7 +57,7 @@ namespace CadastroFornecedores.Migrations
                         column: x => x.FornecedorId,
                         principalTable: "Fornecedores",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -67,11 +67,11 @@ namespace CadastroFornecedores.Migrations
                 {
                     Id = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
                     FornecedorId = table.Column<Guid>(type: "char(36)", nullable: false, collation: "ascii_general_ci"),
-                    Nome = table.Column<string>(type: "longtext", nullable: true)
+                    Nome = table.Column<string>(type: "varchar(50)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Descricao = table.Column<string>(type: "longtext", nullable: true)
+                    Descricao = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Imagem = table.Column<string>(type: "longtext", nullable: true)
+                    Imagem = table.Column<string>(type: "varchar(100)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Valor = table.Column<decimal>(type: "decimal(65,30)", nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime(6)", nullable: false),
@@ -85,7 +85,7 @@ namespace CadastroFornecedores.Migrations
                         column: x => x.FornecedorId,
                         principalTable: "Fornecedores",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 

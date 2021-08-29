@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CadastroFornecedores.Data;
+using CadastroFornecedores.Repositories;
+using CadastroFornecedores.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +28,11 @@ namespace CadastroFornecedores
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddScoped<ApplicationDbContext>();
+            services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.AddScoped<IFornecedorRepository, FornecedorRepository>();
+            services.AddScoped<IEnderecoRepository, EnderecoRepository>();    
 
             var connection = Configuration.GetConnectionString("Default");
             services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(connection, ServerVersion.AutoDetect(connection)));

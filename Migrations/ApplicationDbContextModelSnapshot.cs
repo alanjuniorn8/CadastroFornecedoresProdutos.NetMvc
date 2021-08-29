@@ -25,39 +25,34 @@ namespace CadastroFornecedores.Migrations
 
                     b.Property<string>("Bairro")
                         .IsRequired()
-                        .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("Cep")
                         .IsRequired()
-                        .HasMaxLength(8)
                         .HasColumnType("varchar(8)");
 
                     b.Property<string>("Cidade")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Complemento")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Estado")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<Guid>("FornecedorId")
                         .HasColumnType("char(36)");
 
                     b.Property<string>("Logradouro")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Numero")
                         .IsRequired()
-                        .HasMaxLength(5)
-                        .HasColumnType("varchar(5)");
+                        .HasColumnType("varchar(6)");
 
                     b.HasKey("Id");
 
@@ -78,12 +73,10 @@ namespace CadastroFornecedores.Migrations
 
                     b.Property<string>("Documento")
                         .IsRequired()
-                        .HasMaxLength(14)
                         .HasColumnType("varchar(14)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
                     b.Property<int>("TipoFornecedor")
@@ -108,20 +101,18 @@ namespace CadastroFornecedores.Migrations
 
                     b.Property<string>("Descricao")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<Guid>("FornecedorId")
                         .HasColumnType("char(36)");
 
                     b.Property<string>("Imagem")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("varchar(200)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<decimal>("Valor")
                         .HasColumnType("decimal(65,30)");
@@ -138,7 +129,6 @@ namespace CadastroFornecedores.Migrations
                     b.HasOne("CadastroFornecedores.Models.Fornecedor", "Fornecedor")
                         .WithOne("Endereco")
                         .HasForeignKey("CadastroFornecedores.Models.Endereco", "FornecedorId")
-                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Fornecedor");
@@ -149,7 +139,6 @@ namespace CadastroFornecedores.Migrations
                     b.HasOne("CadastroFornecedores.Models.Fornecedor", "Fornecedor")
                         .WithMany("Produtos")
                         .HasForeignKey("FornecedorId")
-                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Fornecedor");
