@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Y4LbTnPUqU5tmF4uBgkymtwj4k+YDlg5C59hSmSJHft65XuV7BDOdFkZw7HskKatWQ0QCEiizgTw1D45C00ysg==",
+  "dgSpecHash": "Zef1gPt3XWIL0G863tcQbMyfYDSXBgbsKZLg52jKuPtUZfV4iA12B5H4ZLQs8IccuMiRj595IDdHfTMKW6mMmw==",
   "success": true,
   "projectFilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/CadastroFornecedores.csproj",
   "expectedPackageFiles": [
+    "/home/alan/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
+    "/home/alan/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "/home/alan/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/alan/.nuget/packages/microsoft.aspnetcore.authentication/2.2.0/microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "/home/alan/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.2.0/microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
@@ -87,7 +89,7 @@
     "/home/alan/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
     "/home/alan/.nuget/packages/system.objectmodel/4.3.0/system.objectmodel.4.3.0.nupkg.sha512",
     "/home/alan/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
-    "/home/alan/.nuget/packages/system.reflection.emit/4.3.0/system.reflection.emit.4.3.0.nupkg.sha512",
+    "/home/alan/.nuget/packages/system.reflection.emit/4.7.0/system.reflection.emit.4.7.0.nupkg.sha512",
     "/home/alan/.nuget/packages/system.reflection.emit.ilgeneration/4.3.0/system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "/home/alan/.nuget/packages/system.reflection.emit.lightweight/4.3.0/system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "/home/alan/.nuget/packages/system.reflection.extensions/4.3.0/system.reflection.extensions.4.3.0.nupkg.sha512",
