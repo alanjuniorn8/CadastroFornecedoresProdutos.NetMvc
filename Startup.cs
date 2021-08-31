@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CadastroFornecedores.Areas.Identity.Data;
 using CadastroFornecedores.Data;
 using CadastroFornecedores.Repositories;
 using CadastroFornecedores.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,11 +24,18 @@ namespace CadastroFornecedores
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; } 
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connection = Configuration.GetConnectionString("Default");
+
+            services.AddDbContext<IdentityContext>(options => options.UseMySql(connection, ServerVersion.AutoDetect(connection)));
+
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddDefaultUI()
+                .AddEntityFrameworkStores<IdentityContext>();
 
             services.AddAutoMapper(typeof(Startup));
             services.AddControllersWithViews();
@@ -36,7 +45,7 @@ namespace CadastroFornecedores
             services.AddScoped<IFornecedorRepository, FornecedorRepository>();
             services.AddScoped<IEnderecoRepository, EnderecoRepository>();    
 
-            var connection = Configuration.GetConnectionString("Default");
+            
             services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(connection, ServerVersion.AutoDetect(connection)));
         }
 
@@ -59,6 +68,8 @@ namespace CadastroFornecedores
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
