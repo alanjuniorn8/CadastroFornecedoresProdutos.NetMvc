@@ -26,6 +26,7 @@ namespace CadastroFornecedores.ViewModels
 
         public IFormFile ImagemUpload { get; set; }
 
+        [DisplayName("Imagem do Produto")]
         public string Imagem { get; set; }
         
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
