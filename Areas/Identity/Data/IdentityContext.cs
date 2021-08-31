@@ -10,7 +10,7 @@ namespace CadastroFornecedores.Areas.Identity.Data
 {
     public class IdentityContext : IdentityDbContext<IdentityUser>
     {
-        public IdentityContext(DbContextOptions<IdentityContext> options)
+        public IdentityContext(DbContextOptions options)
             : base(options)
         {
         }
