@@ -2,9 +2,12 @@
 using CadastroFornecedores.Models;
 using CadastroFornecedores.Repositories.Interfaces;
 using CadastroFornecedores.ViewModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace CadastroFornecedores.Controllers
@@ -52,6 +55,14 @@ namespace CadastroFornecedores.Controllers
             produtoViewModel = await PopularFornecedores(produtoViewModel);
 
             if (!ModelState.IsValid) return View(produtoViewModel);
+
+            var imgPrefixo = Guid.NewGuid() + "_";
+            if (!await UploadArquivo(produtoViewModel.ImagemUpload, imgPrefixo))
+            {
+                return View(produtoViewModel);
+            }
+
+            produtoViewModel.Imagem = imgPrefixo + produtoViewModel.ImagemUpload.FileName;
 
             var produto = _mapper.Map<Produto>(produtoViewModel);
             await _produtoRepository.Adicionar(produto);
@@ -114,6 +125,26 @@ namespace CadastroFornecedores.Controllers
         {
             produtoViewModel.Fornecedores = _mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos());
             return produtoViewModel;
+        }
+
+        private async Task<bool> UploadArquivo(IFormFile file, string imgPrefixo)
+        {
+            if (file.Length <= 0) return false;
+
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imagens", imgPrefixo + file.FileName);
+
+            if (System.IO.File.Exists(path))
+            {
+                ModelState.AddModelError(string.Empty, "Já existe um arquivo com esse nome!");
+                return false;
+            }
+
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+             return true;
         }
 
     }
