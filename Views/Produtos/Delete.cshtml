@@ -1,14 +1,18 @@
 ﻿@model CadastroFornecedores.ViewModels.ProdutoViewModel
 @{
-    ViewData["Title"] = Model.Nome;
+    ViewData["Title"] = "Excluir - " + Model.Nome;
  }
 
 <h1 style="padding-top: 50px">@ViewData["Title"]</h1>
+<h3>Você tem certeza disso?</h3>
 <hr />
 <div  class="row">
-    <partial name="_Details">
+    <partial name="_DetailsProduto">
     <div>
-        <a class="btn btn-dark" asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
-        <a class="btn btn-info" href="javascript:window.history.back();">Voltar</a>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Excluir" class="btn btn-danger" />
+            <a class="btn btn-info" href="javascript:window.history.back();">Voltar</a>
+        </form>
     </div>
 </div>

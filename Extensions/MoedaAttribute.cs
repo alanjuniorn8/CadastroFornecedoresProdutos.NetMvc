@@ -5,7 +5,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 
-namespace CadastroFornecedores.Repositories.Extensions
+namespace CadastroFornecedores.Extensions
 {
     public class MoedaAttribute : ValidationAttribute
     {

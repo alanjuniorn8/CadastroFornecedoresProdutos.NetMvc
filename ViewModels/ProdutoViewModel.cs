@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using CadastroFornecedores.Repositories.Extensions;
+using CadastroFornecedores.Extensions;
 using Microsoft.AspNetCore.Http;
 
 namespace CadastroFornecedores.ViewModels

@@ -4,7 +4,7 @@ using System.Globalization;
 using CadastroFornecedores.Areas.Identity.Data;
 using CadastroFornecedores.Data;
 using CadastroFornecedores.Repositories;
-using CadastroFornecedores.Repositories.Extensions;
+using CadastroFornecedores.Extensions;
 using CadastroFornecedores.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
