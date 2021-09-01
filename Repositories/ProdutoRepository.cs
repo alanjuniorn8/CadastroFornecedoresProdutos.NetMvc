@@ -11,9 +11,9 @@ using Microsoft.EntityFrameworkCore;
 namespace CadastroFornecedores.Repositories
 {
 
-    public abstract class ProdutoRepository : Repository<Produto>, IProdutoRepository
+    public class ProdutoRepository : Repository<Produto>, IProdutoRepository
     {
-        protected ProdutoRepository(ApplicationDbContext dbContext)
+        public ProdutoRepository(ApplicationDbContext dbContext)
             : base(dbContext)
         {
         }

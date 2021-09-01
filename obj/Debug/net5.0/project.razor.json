@@ -15624,13 +15624,48 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Produtos/Index.cshtml",
+      "TargetPath": "Views\\Produtos\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Areas/Identity/Pages/_ViewStart.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Areas/Identity/Pages/Account/_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Areas/Identity/Pages/Account/Register.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Fornecedores/Create.cshtml",
+      "TargetPath": "Views\\Fornecedores\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Areas/Identity/Pages/_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Shared/_LoginPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15649,8 +15684,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Fornecedores/_Endereco.cshtml",
+      "TargetPath": "Views\\Fornecedores\\_Endereco.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Fornecedores/Index.cshtml",
+      "TargetPath": "Views\\Fornecedores\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Areas/Identity/Pages/Account/Login.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Produtos/Create.cshtml",
+      "TargetPath": "Views\\Produtos\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     }
   ],

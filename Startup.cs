@@ -29,10 +29,6 @@ namespace CadastroFornecedores
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = Configuration.GetConnectionString("Default");
-
-            services.AddDbContext<IdentityContext>(options => options.UseMySql(connection, ServerVersion.AutoDetect(connection)));
-
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI()
                 .AddEntityFrameworkStores<IdentityContext>();
@@ -45,8 +41,9 @@ namespace CadastroFornecedores
             services.AddScoped<IFornecedorRepository, FornecedorRepository>();
             services.AddScoped<IEnderecoRepository, EnderecoRepository>();    
 
-            
+            var connection = Configuration.GetConnectionString("Default");
             services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(connection, ServerVersion.AutoDetect(connection)));
+            services.AddDbContext<IdentityContext>(options => options.UseMySql(connection, ServerVersion.AutoDetect(connection)));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,8 +71,13 @@ namespace CadastroFornecedores
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}"
+
+                );
+
+                endpoints.MapRazorPages();   
             });
 
             serviceProvider.GetService<ApplicationDbContext>().Database.Migrate();

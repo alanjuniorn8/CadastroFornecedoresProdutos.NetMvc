@@ -11,9 +11,9 @@ using Microsoft.EntityFrameworkCore;
 namespace CadastroFornecedores.Repositories
 {
 
-    public abstract class EnderecoRepository : Repository<Endereco>, IEnderecoRepository
+    public class EnderecoRepository : Repository<Endereco>, IEnderecoRepository
     {
-        protected EnderecoRepository(ApplicationDbContext dbContext) 
+        public EnderecoRepository(ApplicationDbContext dbContext) 
             : base(dbContext)
         {
         }

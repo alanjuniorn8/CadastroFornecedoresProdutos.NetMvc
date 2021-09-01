@@ -1,4 +1,4 @@
-﻿@model CadastroFornecedores.ViewModels.ProdutoViewModel
+﻿@model IEnumerable<CadastroFornecedores.ViewModels.ProdutoViewModel>
 
 @{
     ViewData["Title"] = "Produtos";
@@ -7,7 +7,7 @@
 <h1>@ViewData["Title"]</h1>
 
 <p>
-    <a class="btn btn-info" asp-action="Create">Novo Fornecedor</a>
+    <a class="btn btn-info" asp-action="Create">Novo Produto</a>
 </p>
 
 <table class="table table-hover">
@@ -16,15 +16,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
-            <td>
+            <th>
                 @Html.DisplayNameFor(model => model.Fornecedor.Nome)
-            </td>
-            <td>
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Valor)
-            </td>
-            <td class="text-center">
+            </th>
+            <th class="text-center">
                 @Html.DisplayNameFor(model => model.Ativo)
-            </td>
+            </th>
             <th></th>
         </tr>
     </thead>

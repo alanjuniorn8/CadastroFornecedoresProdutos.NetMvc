@@ -11,9 +11,9 @@ using Microsoft.EntityFrameworkCore;
 namespace CadastroFornecedores.Repositories
 {
 
-    public abstract class FornecedorRepository : Repository<Fornecedor>, IFornecedorRepository
+    public class FornecedorRepository : Repository<Fornecedor>, IFornecedorRepository
     {
-        protected FornecedorRepository(ApplicationDbContext dbContext) 
+        public FornecedorRepository(ApplicationDbContext dbContext) 
             : base(dbContext)
         {
         }
