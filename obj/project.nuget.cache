@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gCrpWvkcG3XR3ThtYB7iqozGBOo7X52bqx+Ept9qq+HQM8gcEc/UYV3UQVPhkhi7SNq692rn6rOnn7ZHAxpzdA==",
+  "dgSpecHash": "8A7skF7ok5BRM3DhdwaEzY65LyPBvpre2W2Mp0xUXetuOtHKpwGvXYrV5T50eCeGDeu5sb6OXufMdb/UuHvaUw==",
   "success": true,
   "projectFilePath": "C:\\Users\\NOTEBOOK-ANDERSON\\Desktop\\AppDotNet\\CadastroDeFornecedores\\DotNetAppMvc\\CadastroFornecedores.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NOTEBOOK-ANDERSON\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\NOTEBOOK-ANDERSON\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\NOTEBOOK-ANDERSON\\.nuget\\packages\\fluentvalidation\\10.3.3\\fluentvalidation.10.3.3.nupkg.sha512",
     "C:\\Users\\NOTEBOOK-ANDERSON\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\NOTEBOOK-ANDERSON\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\NOTEBOOK-ANDERSON\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
