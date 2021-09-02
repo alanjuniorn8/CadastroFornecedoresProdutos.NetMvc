@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/CadastroFornecedores.csproj": {}
+    "C:\\Users\\NOTEBOOK-ANDERSON\\Desktop\\AppDotNet\\CadastroDeFornecedores\\DotNetAppMvc\\CadastroFornecedores.csproj": {}
   },
   "projects": {
-    "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/CadastroFornecedores.csproj": {
+    "C:\\Users\\NOTEBOOK-ANDERSON\\Desktop\\AppDotNet\\CadastroDeFornecedores\\DotNetAppMvc\\CadastroFornecedores.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/CadastroFornecedores.csproj",
+        "projectUniqueName": "C:\\Users\\NOTEBOOK-ANDERSON\\Desktop\\AppDotNet\\CadastroDeFornecedores\\DotNetAppMvc\\CadastroFornecedores.csproj",
         "projectName": "CadastroFornecedores",
-        "projectPath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/CadastroFornecedores.csproj",
-        "packagesPath": "/home/alan/.nuget/packages/",
-        "outputPath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/obj/",
+        "projectPath": "C:\\Users\\NOTEBOOK-ANDERSON\\Desktop\\AppDotNet\\CadastroDeFornecedores\\DotNetAppMvc\\CadastroFornecedores.csproj",
+        "packagesPath": "C:\\Users\\NOTEBOOK-ANDERSON\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NOTEBOOK-ANDERSON\\Desktop\\AppDotNet\\CadastroDeFornecedores\\DotNetAppMvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/alan/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\NOTEBOOK-ANDERSON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -105,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
