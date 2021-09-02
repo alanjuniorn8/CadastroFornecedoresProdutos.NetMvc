@@ -10,6 +10,8 @@ namespace CadastroFornecedores.Data
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
+            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+            ChangeTracker.AutoDetectChangesEnabled = false;
         }
             public DbSet<Produto> Produtos { get; set; }
             public DbSet<Fornecedor> Fornecedores { get; set; }

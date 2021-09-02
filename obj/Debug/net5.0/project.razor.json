@@ -15644,6 +15644,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Fornecedores/_DetailsEndereco.cshtml",
+      "TargetPath": "Views\\Fornecedores\\_DetailsEndereco.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -15661,6 +15666,21 @@
     {
       "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Fornecedores/Details.cshtml",
+      "TargetPath": "Views\\Fornecedores\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Produtos/_DetailsProduto.cshtml",
+      "TargetPath": "Views\\Produtos\\_DetailsProduto.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Fornecedores/Edit.cshtml",
+      "TargetPath": "Views\\Fornecedores\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15684,6 +15704,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Produtos/Edit.cshtml",
+      "TargetPath": "Views\\Produtos\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Produtos/Delete.cshtml",
+      "TargetPath": "Views\\Produtos\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Fornecedores/_Endereco.cshtml",
       "TargetPath": "Views\\Fornecedores\\_Endereco.cshtml",
       "FileKind": "mvc"
@@ -15694,8 +15724,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Produtos/_ListaProdutos.cshtml",
+      "TargetPath": "Views\\Produtos\\_ListaProdutos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Produtos/Details.cshtml",
+      "TargetPath": "Views\\Produtos\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Fornecedores/Delete.cshtml",
+      "TargetPath": "Views\\Fornecedores\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {

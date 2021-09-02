@@ -41,7 +41,8 @@ namespace CadastroFornecedores.Extensions
             if (context == null) throw new ArgumentNullException(nameof(context));
 
             MergeAttribute(context.Attributes, "data-val", "true");
-            MergeAttribute(context.Attributes, "data-val-number", GetErrorMessage(context));]MergeAttribute(context.Attributes, "data-val-moeda", GetErrorMessage(context));
+            MergeAttribute(context.Attributes, "data-val-number", GetErrorMessage(context));
+            MergeAttribute(context.Attributes, "data-val-moeda", GetErrorMessage(context));
 
         }
 
