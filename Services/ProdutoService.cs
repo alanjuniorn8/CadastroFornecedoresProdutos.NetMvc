@@ -1,4 +1,5 @@
 ﻿using CadastroFornecedores.Models;
+using CadastroFornecedores.Notificacoes;
 using CadastroFornecedores.Repositories.Interfaces;
 using CadastroFornecedores.Services.Interfaces;
 using CadastroFornecedores.Validators;
@@ -11,7 +12,7 @@ namespace CadastroFornecedores.Services
     {
         private readonly IProdutoRepository _produtoRepository;
 
-        public ProdutoService(IProdutoRepository produtoRepository)
+        public ProdutoService(IProdutoRepository produtoRepository, INotificador notificador) : base(notificador)
         {
             _produtoRepository = produtoRepository;
         }

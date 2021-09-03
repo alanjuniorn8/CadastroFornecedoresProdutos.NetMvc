@@ -9,7 +9,7 @@
 
 <form asp-action="Edit">
 
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <vc:errors-summary-component></vc:errors-summary-component>
 
     <input type="hidden" asp-for="Id" />
 

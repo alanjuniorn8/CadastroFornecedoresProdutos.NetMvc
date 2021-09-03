@@ -1,4 +1,5 @@
 ﻿using CadastroFornecedores.Models;
+using CadastroFornecedores.Notificacoes;
 using CadastroFornecedores.Repositories.Interfaces;
 using CadastroFornecedores.Services.Interfaces;
 using CadastroFornecedores.Validators;
@@ -14,7 +15,8 @@ namespace CadastroFornecedores.Services
         private readonly IFornecedorRepository _fornecedorRepository;
         private readonly IEnderecoRepository _enderecoRepository;
 
-        public FornecedorService(IFornecedorRepository fornecedorRepository, IEnderecoRepository enderecoRepository)
+        public FornecedorService(IFornecedorRepository fornecedorRepository, IEnderecoRepository enderecoRepository, INotificador notificador)
+            : base(notificador)
         {
             _fornecedorRepository = fornecedorRepository;
             _enderecoRepository = enderecoRepository;
@@ -22,8 +24,8 @@ namespace CadastroFornecedores.Services
 
         public async Task Adicionar(Fornecedor fornecedor)
         {
-            if (!ExecutarValidacao(new FornecedorValidator(), fornecedor) 
-                && !ExecutarValidacao(new EnderecoValidator(), fornecedor.Endereco)) return;
+            if (!ExecutarValidacao(new FornecedorValidator(), fornecedor)
+                 || !ExecutarValidacao(new EnderecoValidator(), fornecedor.Endereco)) return;
 
             if (_fornecedorRepository.Buscar(f => f.Documento == fornecedor.Documento).Result.Any())
             {

@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using CadastroFornecedores.Models;
+using CadastroFornecedores.Notificacoes;
 using CadastroFornecedores.Repositories.Interfaces;
+using CadastroFornecedores.Services.Interfaces;
 using CadastroFornecedores.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,14 +17,17 @@ namespace CadastroFornecedores.Controllers
     [Route("produtos")]
     public class ProdutosController : BaseController
     {
+        private readonly IProdutoService _produtoService;
         private readonly IProdutoRepository _produtoRepository;
         private readonly IFornecedorRepository _fornecedorRepository;
         private readonly IMapper _mapper;
 
-        public ProdutosController(IProdutoRepository produtoRepository, IFornecedorRepository fornecedorRepository, IMapper mapper)
+        public ProdutosController(IProdutoService produtoService, IProdutoRepository produtoRepository, IFornecedorRepository fornecedorRepository, IMapper mapper, INotificador notificador)
+            : base(notificador)
         {
             _produtoRepository = produtoRepository;
             _fornecedorRepository = fornecedorRepository;
+            _produtoService = produtoService;
             _mapper = mapper;
         }
 
@@ -68,7 +73,9 @@ namespace CadastroFornecedores.Controllers
             produtoViewModel.Imagem = imgPrefixo + produtoViewModel.ImagemUpload.FileName;
 
             var produto = _mapper.Map<Produto>(produtoViewModel);
-            await _produtoRepository.Adicionar(produto);
+            await _produtoService.Adicionar(produto);
+
+            if (OperacaoInvalida()) return View(produtoViewModel);
 
             return RedirectToAction(nameof(Index));
         }
@@ -114,7 +121,9 @@ namespace CadastroFornecedores.Controllers
 
 
             var produto = _mapper.Map<Produto>(produtoAtualizacao);
-            await _produtoRepository.Atualizar(produto);
+            await _produtoService.Atualizar(produto);
+
+            if (OperacaoInvalida()) return View(produtoViewModel);
 
             return RedirectToAction(nameof(Index));
         }
@@ -136,7 +145,12 @@ namespace CadastroFornecedores.Controllers
             var produtoViewModel = await ObterProduto(id);
             if (produtoViewModel == null) return NotFound();
 
-            await _produtoRepository.Remover(id);
+            await _produtoService.Remover(id);
+
+            if (OperacaoInvalida()) return View(produtoViewModel);
+
+
+            TempData["Sucesso"] = "Produto excluido com sucesso!";
 
             return RedirectToAction(nameof(Index));
         }

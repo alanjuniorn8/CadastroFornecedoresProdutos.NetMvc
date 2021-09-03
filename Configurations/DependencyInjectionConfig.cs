@@ -1,15 +1,12 @@
 ﻿using CadastroFornecedores.Data;
 using CadastroFornecedores.Extensions;
+using CadastroFornecedores.Notificacoes;
 using CadastroFornecedores.Repositories;
 using CadastroFornecedores.Repositories.Interfaces;
-using Microsoft.AspNetCore.Builder;
+using CadastroFornecedores.Services;
+using CadastroFornecedores.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc.DataAnnotations;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CadastroFornecedores.Configurations
 {
@@ -23,6 +20,10 @@ namespace CadastroFornecedores.Configurations
             services.AddScoped<IFornecedorRepository, FornecedorRepository>();
             services.AddScoped<IEnderecoRepository, EnderecoRepository>();
             services.AddSingleton<IValidationAttributeAdapterProvider, MoedaValidationAttributeAdapterProvider>();
+
+            services.AddScoped<INotificador, Notificador>();
+            services.AddScoped<IFornecedorService, FornecedorService>();
+            services.AddScoped<IProdutoService, ProdutoService>();
 
             return services;
         }

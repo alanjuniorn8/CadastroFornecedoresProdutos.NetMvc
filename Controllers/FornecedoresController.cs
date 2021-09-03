@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using CadastroFornecedores.Models;
+using CadastroFornecedores.Notificacoes;
 using CadastroFornecedores.Repositories.Interfaces;
+using CadastroFornecedores.Services.Interfaces;
 using CadastroFornecedores.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,12 +16,14 @@ namespace CadastroFornecedores.Controllers
     public class FornecedoresController : BaseController
     {
         private readonly IFornecedorRepository _fornecedorRepository;
-        private readonly IEnderecoRepository _enderecoRepository;
+        private readonly IFornecedorService _fornecedorService;
         private readonly IMapper _mapper;
 
-        public FornecedoresController(IFornecedorRepository fornecedorRepository, IMapper mapper)
+        public FornecedoresController(IFornecedorRepository fornecedorRepository, IFornecedorService fornecedorService, IMapper mapper, INotificador notificador)
+            : base(notificador)
         {
             _fornecedorRepository = fornecedorRepository;
+            _fornecedorService = fornecedorService;
             _mapper = mapper;
         }
 
@@ -54,7 +58,9 @@ namespace CadastroFornecedores.Controllers
             if (!ModelState.IsValid) return View(fornecedorViewModel);
 
             var fornecedor = _mapper.Map<Fornecedor>(fornecedorViewModel);
-            await _fornecedorRepository.Adicionar(fornecedor);
+            await _fornecedorService.Adicionar(fornecedor);
+
+            if (OperacaoInvalida()) return View(fornecedorViewModel);
 
             return RedirectToAction(nameof(Index));
         }
@@ -80,7 +86,9 @@ namespace CadastroFornecedores.Controllers
             if (!ModelState.IsValid) return View(fornecedorViewModel);
 
             var fornecedor = _mapper.Map<Fornecedor>(fornecedorViewModel);
-            await _fornecedorRepository.Atualizar(fornecedor);
+            await _fornecedorService.Atualizar(fornecedor);
+
+            if (OperacaoInvalida()) return View(fornecedorViewModel);
 
             return RedirectToAction(nameof(Index));
         }
@@ -102,7 +110,11 @@ namespace CadastroFornecedores.Controllers
             var fornecedorViewModel = await ObterFornecedorProdutosEndereco(id);
             if (fornecedorViewModel == null) return NotFound();
 
-            await _fornecedorRepository.Remover(id);
+            await _fornecedorService.Remover(id);
+
+            if (OperacaoInvalida()) return View(fornecedorViewModel);
+
+            TempData["Sucesso"] = "Fornecedor excluido com sucesso!";
 
             return RedirectToAction(nameof(Index));
         }
@@ -135,7 +147,9 @@ namespace CadastroFornecedores.Controllers
 
             if (!ModelState.IsValid) return View(fornecedorViewModel);
 
-            await _enderecoRepository.Atualizar(_mapper.Map<Endereco>(fornecedorViewModel.Endereco));
+            await _fornecedorService.AtualizarEndereco(_mapper.Map<Endereco>(fornecedorViewModel.Endereco));
+
+            if (OperacaoInvalida()) return View(fornecedorViewModel);
 
             var url = Url.Action("ObterEndereco", "Fornecedores", new { id = fornecedorViewModel.Endereco.FornecedorId });
 

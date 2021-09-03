@@ -95,3 +95,9 @@ function buscaCep() {
     });
 
 }
+
+$(document).ready{
+    setTimeout(function () {
+        $("#msg_box").fadeOut(3000);
+    }, 3000);
+}
