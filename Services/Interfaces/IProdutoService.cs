@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace CadastroFornecedores.Services.Interfaces
 {
-    internal interface IProdutoService
+    internal interface IProdutoService : IDisposable
     {
         Task Adicionar(Produto produto);
 

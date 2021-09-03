@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CadastroFornecedores.Services.Interfaces
 {
-    interface IFornecedorService
+    interface IFornecedorService : IDisposable
     {
         Task Adicionar(Fornecedor fornecedor);
 
