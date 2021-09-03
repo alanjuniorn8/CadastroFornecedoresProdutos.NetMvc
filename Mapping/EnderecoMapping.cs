@@ -23,7 +23,6 @@ namespace CadastroFornecedores.Mapping
                 .HasColumnType("varchar(8)");
 
             builder.Property(p => p.Complemento)
-                .IsRequired()
                 .HasColumnType("varchar(50)");
 
             builder.Property(p => p.Bairro)

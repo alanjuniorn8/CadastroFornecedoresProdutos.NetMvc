@@ -12,7 +12,7 @@ namespace CadastroFornecedores.Services.Interfaces
 
         Task Atualizar(Fornecedor fornecedor);
         
-        Task AtualizarEndereco(Fornecedor fornecedor);
+        Task AtualizarEndereco(Endereco endereco);
 
         Task Remover(Guid id);
 
