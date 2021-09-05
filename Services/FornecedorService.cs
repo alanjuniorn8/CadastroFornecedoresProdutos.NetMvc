@@ -64,7 +64,10 @@ namespace CadastroFornecedores.Services
                 return;
             }
 
-            await _enderecoRepository.Remover(id);
+            var enderecoFornecedor = await _enderecoRepository.ObterEnderecoPorFornecedor(id);
+            
+            await _enderecoRepository.Remover(enderecoFornecedor.Id);
+            await _fornecedorRepository.Remover(id);
         }
 
         public void Dispose()

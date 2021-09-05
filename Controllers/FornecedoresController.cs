@@ -128,6 +128,8 @@ namespace CadastroFornecedores.Controllers
             return PartialView("_DetalhesEndereco", fornecedor);
         }
 
+
+        [Route("atualizar-endereco/{id:guid}")]
         public async Task<IActionResult> AtualizarEndereco(Guid id)
         {
             var fornecedor = await ObterFornecedorEndereco(id);

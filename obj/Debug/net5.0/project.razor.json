@@ -11400,6 +11400,32 @@
         }
       },
       {
+        "HashCode": 1404911955,
+        "Kind": "ITagHelper",
+        "Name": "CadastroFornecedores.Extensions.EmailTagHelper",
+        "AssemblyName": "CadastroFornecedores",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "email"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "email-domain",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "EmailDomain"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "CadastroFornecedores.Extensions.EmailTagHelper"
+        }
+      },
+      {
         "HashCode": -838507990,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",
@@ -13566,6 +13592,23 @@
         }
       },
       {
+        "HashCode": 1286323185,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__ErrorsSummaryComponentViewComponentTagHelper",
+        "AssemblyName": "CadastroFornecedores",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:errors-summary-component"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__ErrorsSummaryComponentViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "ErrorsSummaryComponent"
+        }
+      },
+      {
         "HashCode": 1342982883,
         "Kind": "Components.Bind",
         "Name": "Bind",
@@ -15629,6 +15672,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Shared/Components/ErrorsSummary/Default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\ErrorsSummary\\Default.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Areas/Identity/Pages/_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -15751,6 +15799,11 @@
     {
       "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Produtos/Create.cshtml",
       "TargetPath": "Views\\Produtos\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Fornecedores/_AtualizarEndereco.cshtml",
+      "TargetPath": "Views\\Fornecedores\\_AtualizarEndereco.cshtml",
       "FileKind": "mvc"
     },
     {

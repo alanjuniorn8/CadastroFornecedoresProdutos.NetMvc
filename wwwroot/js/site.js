@@ -96,8 +96,8 @@ function buscaCep() {
 
 }
 
-$(document).ready{
+$(document).ready(
     setTimeout(function () {
         $("#msg_box").fadeOut(3000);
-    }, 3000);
-}
+    }, 3000)
+)

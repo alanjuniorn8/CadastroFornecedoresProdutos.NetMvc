@@ -53,8 +53,8 @@ namespace CadastroFornecedores.Repositories
         public virtual async Task Remover(Guid id)
         {
             //DbSet.Remove(await ObterPorId(id));
-            //DbSet.Remove(await DbSet.FindAsync(id));
-            DbSet.Remove(new TEntity { Id = id});
+            DbSet.Remove(await DbSet.FindAsync(id));
+            //DbSet.Remove(new TEntity { Id = id});
             await SaveChanges();
         }
 

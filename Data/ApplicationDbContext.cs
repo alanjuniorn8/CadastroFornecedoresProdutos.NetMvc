@@ -23,9 +23,9 @@ namespace CadastroFornecedores.Data
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
 
             //Change DeleteBehavior Cascade
-            foreach( var relationship in modelBuilder.Model.GetEntityTypes()
-                .SelectMany(e => e.GetForeignKeys()))
-                    relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
+            // foreach( var relationship in modelBuilder.Model.GetEntityTypes()
+            //     .SelectMany(e => e.GetForeignKeys()))
+            //         relationship.DeleteBehavior = DeleteBehavior.Cascade;
 
             base.OnModelCreating(modelBuilder);
         }

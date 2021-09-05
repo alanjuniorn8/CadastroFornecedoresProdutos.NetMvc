@@ -12,7 +12,7 @@ namespace CadastroFornecedores.Notificacoes
 
         public Notificador()
         {
-            _notificacoes = new List<Notificacao>;
+            _notificacoes = new List<Notificacao>();
         }
 
         public void Handle(Notificacao notificacao)
