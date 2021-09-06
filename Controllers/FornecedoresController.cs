@@ -136,7 +136,7 @@ namespace CadastroFornecedores.Controllers
 
             if (fornecedor == null) return NotFound();
 
-            return PartialView("_DetalhesEndereco", fornecedor);
+            return PartialView("_DetailsEndereco", fornecedor);
         }
 
         [ClaimAuthorize("Fornecedor", "Editar")]
@@ -151,6 +151,7 @@ namespace CadastroFornecedores.Controllers
         }
 
         [ClaimAuthorize("Fornecedor", "Editar")]
+        [Route("atualizar-endereco/{id:guid}")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AtualizarEndereco(FornecedorViewModel fornecedorViewModel)

@@ -3,22 +3,22 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace CadastroFornecedores.Extensions
-{   
-    [HtmlTargetElement("*", Attributes = "supress-by-claim-name")]
-    [HtmlTargetElement("*", Attributes = "supress-by-claim-value")]
-    public class ApagaElementoByClaimTagHelper : TagHelper
+{
+    [HtmlTargetElement("a", Attributes = "disable-by-claim-name")]
+    [HtmlTargetElement("a", Attributes = "disable-by-claim-value")]
+    public class DesabilitaElementoByClaimTagHelper : TagHelper
     {
         private readonly IHttpContextAccessor _contextAccessor;
 
-        public ApagaElementoByClaimTagHelper(IHttpContextAccessor contextAccessor)
+        public DesabilitaElementoByClaimTagHelper(IHttpContextAccessor contextAccessor)
         {
             _contextAccessor = contextAccessor;
         }
         
-        [HtmlAttributeName("supress-by-claim-name")]
+        [HtmlAttributeName("disable-by-claim-name")]
         public string IdentityClaimName {get; set;}
 
-        [HtmlAttributeName("supress-by-claim-value")]
+        [HtmlAttributeName("disable-by-claim-value")]
         public string IdentityClaimValue {get; set;}
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
@@ -30,9 +30,10 @@ namespace CadastroFornecedores.Extensions
 
             if(temAcesso) return;
 
-            output.SuppressOutput();
+            output.Attributes.RemoveAll("href");
+            output.Attributes.Add(new TagHelperAttribute("style", "cursor: not-allowed"));
+            output.Attributes.Add(new TagHelperAttribute("title", "Você não possui permissão de acesso"));
             
         }
     }
-
 }

@@ -11473,6 +11473,84 @@
         }
       },
       {
+        "HashCode": 1230578709,
+        "Kind": "ITagHelper",
+        "Name": "CadastroFornecedores.Extensions.DesabilitaElementoByClaimTagHelper",
+        "AssemblyName": "CadastroFornecedores",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "disable-by-claim-name"
+              }
+            ]
+          },
+          {
+            "TagName": "a",
+            "Attributes": [
+              {
+                "Name": "disable-by-claim-value"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "disable-by-claim-name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "IdentityClaimName"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "disable-by-claim-value",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "IdentityClaimValue"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "CadastroFornecedores.Extensions.DesabilitaElementoByClaimTagHelper"
+        }
+      },
+      {
+        "HashCode": 1560654158,
+        "Kind": "ITagHelper",
+        "Name": "CadastroFornecedores.Extensions.ApagaElementoByActionTagHelper",
+        "AssemblyName": "CadastroFornecedores",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "*",
+            "Attributes": [
+              {
+                "Name": "supress-by-action"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "supress-by-action",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "ActionName"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "CadastroFornecedores.Extensions.ApagaElementoByActionTagHelper"
+        }
+      },
+      {
         "HashCode": -838507990,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",
