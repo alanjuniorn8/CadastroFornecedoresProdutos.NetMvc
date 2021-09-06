@@ -11400,29 +11400,34 @@
         }
       },
       {
-        "HashCode": 1404911955,
+        "HashCode": 1560654158,
         "Kind": "ITagHelper",
-        "Name": "CadastroFornecedores.Extensions.EmailTagHelper",
+        "Name": "CadastroFornecedores.Extensions.ApagaElementoByActionTagHelper",
         "AssemblyName": "CadastroFornecedores",
         "CaseSensitive": false,
         "TagMatchingRules": [
           {
-            "TagName": "email"
+            "TagName": "*",
+            "Attributes": [
+              {
+                "Name": "supress-by-action"
+              }
+            ]
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "ITagHelper",
-            "Name": "email-domain",
+            "Name": "supress-by-action",
             "TypeName": "System.String",
             "Metadata": {
-              "Common.PropertyName": "EmailDomain"
+              "Common.PropertyName": "ActionName"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "ITagHelper",
-          "Common.TypeName": "CadastroFornecedores.Extensions.EmailTagHelper"
+          "Common.TypeName": "CadastroFornecedores.Extensions.ApagaElementoByActionTagHelper"
         }
       },
       {
@@ -11520,34 +11525,29 @@
         }
       },
       {
-        "HashCode": 1560654158,
+        "HashCode": 1404911955,
         "Kind": "ITagHelper",
-        "Name": "CadastroFornecedores.Extensions.ApagaElementoByActionTagHelper",
+        "Name": "CadastroFornecedores.Extensions.EmailTagHelper",
         "AssemblyName": "CadastroFornecedores",
         "CaseSensitive": false,
         "TagMatchingRules": [
           {
-            "TagName": "*",
-            "Attributes": [
-              {
-                "Name": "supress-by-action"
-              }
-            ]
+            "TagName": "email"
           }
         ],
         "BoundAttributes": [
           {
             "Kind": "ITagHelper",
-            "Name": "supress-by-action",
+            "Name": "email-domain",
             "TypeName": "System.String",
             "Metadata": {
-              "Common.PropertyName": "ActionName"
+              "Common.PropertyName": "EmailDomain"
             }
           }
         ],
         "Metadata": {
           "Runtime.Name": "ITagHelper",
-          "Common.TypeName": "CadastroFornecedores.Extensions.ApagaElementoByActionTagHelper"
+          "Common.TypeName": "CadastroFornecedores.Extensions.EmailTagHelper"
         }
       },
       {
