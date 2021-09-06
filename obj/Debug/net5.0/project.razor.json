@@ -11426,6 +11426,53 @@
         }
       },
       {
+        "HashCode": 1311224737,
+        "Kind": "ITagHelper",
+        "Name": "CadastroFornecedores.Extensions.ApagaElementoByClaimTagHelper",
+        "AssemblyName": "CadastroFornecedores",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "*",
+            "Attributes": [
+              {
+                "Name": "supress-by-claim-name"
+              }
+            ]
+          },
+          {
+            "TagName": "*",
+            "Attributes": [
+              {
+                "Name": "supress-by-claim-value"
+              }
+            ]
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "supress-by-claim-name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "IdentityClaimName"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "supress-by-claim-value",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "IdentityClaimValue"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "CadastroFornecedores.Extensions.ApagaElementoByClaimTagHelper"
+        }
+      },
+      {
         "HashCode": -838507990,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",
