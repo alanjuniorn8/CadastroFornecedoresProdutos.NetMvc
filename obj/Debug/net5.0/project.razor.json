@@ -15672,11 +15672,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Shared/Components/ErrorsSummary/Default.cshtml",
-      "TargetPath": "Views\\Shared\\Components\\ErrorsSummary\\Default.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Areas/Identity/Pages/_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -15764,6 +15759,11 @@
     {
       "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Fornecedores/_Endereco.cshtml",
       "TargetPath": "Views\\Fornecedores\\_Endereco.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/alan/VScode-workspace/AppMvc/CadastroFornecedores/Views/Shared/Components/ErrorsSummaryComponent/Default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\ErrorsSummaryComponent\\Default.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -48,9 +48,9 @@ namespace CadastroFornecedores
             app.UseStaticFiles();
             app.UseRouting();
 
-            app.UseAuthorization();
             app.UseAuthentication();
-
+            app.UseAuthorization();
+            
             app.UseGlobalizationConfig();
 
             app.UseEndpoints(endpoints =>

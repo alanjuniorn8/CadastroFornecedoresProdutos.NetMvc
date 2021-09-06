@@ -1,12 +1,13 @@
 ﻿using AutoMapper;
+using CadastroFornecedores.Extensions;
 using CadastroFornecedores.Models;
 using CadastroFornecedores.Notificacoes;
 using CadastroFornecedores.Repositories.Interfaces;
 using CadastroFornecedores.Services.Interfaces;
 using CadastroFornecedores.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,6 +15,7 @@ using System.Threading.Tasks;
 
 namespace CadastroFornecedores.Controllers
 {
+    [Authorize]
     [Route("produtos")]
     public class ProdutosController : BaseController
     {
@@ -31,12 +33,14 @@ namespace CadastroFornecedores.Controllers
             _mapper = mapper;
         }
 
+        [AllowAnonymous]
         [Route("lista")]
         public async Task<IActionResult> Index()
         {
             return View(_mapper.Map<IEnumerable<ProdutoViewModel>>(await _produtoRepository.ObterProdutosFornecedores()));
         }
 
+        [AllowAnonymous]
         [Route("detalhes/{id:guid}")]
         public async Task<IActionResult> Details(Guid id)
         {
@@ -47,13 +51,15 @@ namespace CadastroFornecedores.Controllers
             return View(produtoViewModel);
         }
 
+        [ClaimAuthorize("Produto", "Adicionar")]
         [Route("novo")]
         public async Task<IActionResult> Create()
         {
             var produtoViewModel = await PopularFornecedores(new ProdutoViewModel());
             return View(produtoViewModel);
         }
-
+        
+        [ClaimAuthorize("Produto", "Adicionar")]
         [Route("novo")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -80,6 +86,7 @@ namespace CadastroFornecedores.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [ClaimAuthorize("Produto", "Editar")]
         [Route("editar/{id:guid}")]
         public async Task<IActionResult> Edit(Guid id)
         {
@@ -90,6 +97,7 @@ namespace CadastroFornecedores.Controllers
             return View(produtoViewModel);
         }
 
+        [ClaimAuthorize("Produto", "Editar")]
         [Route("editar/{id:guid}")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -128,6 +136,8 @@ namespace CadastroFornecedores.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+        [ClaimAuthorize("Produto", "Excluir")]
         [Route("excluir/{id:guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
@@ -137,6 +147,7 @@ namespace CadastroFornecedores.Controllers
             return View(produtoViewModel);
         }
 
+        [ClaimAuthorize("Produto", "Excluir")]
         [Route("excluir/{id:guid}")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
