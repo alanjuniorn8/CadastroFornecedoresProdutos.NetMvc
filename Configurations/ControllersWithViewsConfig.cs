@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,9 @@ namespace CadastroFornecedores.Configurations
                 o.ModelBindingMessageProvider.SetValueIsInvalidAccessor((x) => "O valor preenchido é invalido para este campo");
                 o.ModelBindingMessageProvider.SetValueMustBeANumberAccessor((x) => "O campo deve ser numérico");
                 o.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor((x) => "O campo {0} é obrogatório");
+
+                o.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+            
             });
 
             return services;
