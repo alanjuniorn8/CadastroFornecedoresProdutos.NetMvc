@@ -88,8 +88,11 @@ namespace CadastroFornecedores.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, FornecedorViewModel fornecedorViewModel)
         {
+            
 
-            if (id != fornecedorViewModel.Id) return NotFound(); 
+            if (id != fornecedorViewModel.Id) return NotFound();
+
+            fornecedorViewModel.Produtos = ObterFornecedorProdutosEndereco(id).Result.Produtos;
 
             if (!ModelState.IsValid) return View(fornecedorViewModel);
 
@@ -101,7 +104,7 @@ namespace CadastroFornecedores.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [ClaimAuthorize("Fornecedor", "Remover")]
+        [ClaimAuthorize("Fornecedor", "Excluir")]
         [Route("excluir/{id:guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
@@ -111,7 +114,7 @@ namespace CadastroFornecedores.Controllers
             return View(fornecedorViewModel);
         }
 
-        [ClaimAuthorize("Fornecedor", "Remover")]
+        [ClaimAuthorize("Fornecedor", "Excluir")]
         [Route("excluir/{id:guid}")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
