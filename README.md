@@ -6,13 +6,13 @@
   🚀 Ready to run...
 </h4>
 
-### Features
+### ✨ Features
 
 - [x] Cadastro de usuário
 - [x] Cadastro de fornecedores
 - [x] Cadastro de produtos
 
-### Pré-requisitos
+### 🚧 Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina o framework [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
 Além disto é necessário ter configurado um database MySql[MySql](https://www.mysql.com/)
