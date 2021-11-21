@@ -36,8 +36,7 @@ $ dotnet run
 
 # O servidor inciará na porta:5001 - acesse <https://localhost:5001>
 ```
-Para 100% de aproveitamento é necessário dar ao usuário criado autorizações 
-Para isso na tabela AspNetUserClaim link o UserId com claimType "Fornecedor" e "Produto" e ClaimValue , Adicionar, "Editar" e "Excluir"
+Para 100% de aproveitamento é necessário dar ao usuário criado autorizações, para isso na tabela AspNetUserClaim link o UserId com claimType "Fornecedor" e "Produto" e o  ClaimValue com "Adicionar, Editar, Excluir"
 
 <table border="1">
     <tr>
