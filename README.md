@@ -29,7 +29,8 @@ $ git clone <https://github.com/alanjuniorn8/CadastroFornecedores.NetMvc>
 $ dotnet tool install --global dotnet-ef
 
 # Na pasta do projeto no terminal/cmd execute as migrations para atualizar o banco
-$ dotnet ef database update
+$ dotnet ef database update --context ApplicationDbContext
+$ dotnet ef database update --context IdentityContext
 
 # Execute a aplicação em modo de desenvolvimento
 $ dotnet run
