@@ -1,7 +1,7 @@
 ﻿@model CadastroFornecedores.ViewModels.ProdutoViewModel
 
     <div class="col-md-4">
-        <img src="~/imagens/@Model.Imagem" alt="@Model.Imagem" style="width: 300px; height: 428px" />
+        <img src="~/imagens/@Model.Imagem" alt="@Model.Imagem" style="width: 300px; height: 300px" />
     </div>
     <div class="col-md-6">
         <dl>
@@ -38,7 +38,7 @@
             <dt>
                 @Html.DisplayNameFor(model => model.Ativo)
             </dt>
-            <dd class="text-center">
+            <dd>
                 @Html.DisplayFor(model => model.Ativo)
             </dd>
         </dl>

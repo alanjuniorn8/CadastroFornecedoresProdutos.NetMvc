@@ -8,7 +8,7 @@
 <div  class="row">
     <partial name="_DetailsProduto">
     <div>
-        <a class="btn btn-dark" asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
+            <a class="btn btn-dark" supress-by-claim-name="Produto"  supress-by-claim-value="Editar" asp-action="Edit" asp-route-id="@Model.Id">Editar</a>
         <a class="btn btn-info" href="javascript:window.history.back();">Voltar</a>
     </div>
 </div>

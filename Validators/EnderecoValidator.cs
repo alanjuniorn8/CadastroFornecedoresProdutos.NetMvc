@@ -22,6 +22,8 @@ namespace CadastroFornecedores.Validators
 
 
             RuleFor(c => c.Complemento)
+                .NotEmpty()
+                .WithMessage("O campo {PropertyName} precisa ser fornecido")
                 .Length(0, 50)
                 .WithMessage("O campo {PropertyName} aceita no máximo {MaxLength} caracteres");
 

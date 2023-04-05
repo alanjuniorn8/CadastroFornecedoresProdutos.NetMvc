@@ -34,8 +34,9 @@
             <input type="radio" value="1" asp-for="TipoFornecedor" checked="@(Model.TipoFornecedor == 1)" /> Pessoa Física <br />
             <input type="radio" value="2" asp-for="TipoFornecedor" checked="@(Model.TipoFornecedor == 2)" /> Pessoa Jurídica <br />
 
-            <label class="form-check-label">
-                <input class="form-check-input" asp-for="Ativo" checked="@(Model.Ativo == true)" /> @Html.DisplayNameFor(model => model.Ativo)
+            <label class="form-check-label" style="margin-left: 1.3rem">
+                <input class="form-check-input" asp-for="Ativo" checked="@(Model.Ativo == true)" />
+                @Html.DisplayNameFor(model => model.Ativo)
             </label>
 
         </div>

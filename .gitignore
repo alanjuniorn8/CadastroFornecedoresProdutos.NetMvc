@@ -1,4 +1,9 @@
-wwwroot/imagens/
+# exclude everything
+wwwroot/imagens/*
+
+# exception to the rule
+!wwwroot/imagens/.gitkeep
+
 .idea/
 .vscode/
 .vs/
